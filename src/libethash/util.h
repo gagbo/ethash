@@ -26,7 +26,7 @@
 extern "C" {
 #endif
 
-#ifdef _MSC_VER
+#if defined(_MSC_VER) || defined(__MINGW32__)
 void debugf(char const* str, ...);
 #else
 #define debugf printf
