@@ -10,5 +10,5 @@ endif()
 
 add_subdirectory(src/libethash)
 
-add_subdirectory(src/benchmark EXCLUDE_FROM_ALL)
-add_subdirectory(test/c)
+#add_subdirectory(src/benchmark EXCLUDE_FROM_ALL)
+#add_subdirectory(test/c)
