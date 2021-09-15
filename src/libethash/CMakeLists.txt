@@ -42,3 +42,11 @@ add_library(${LIBRARY} ${FILES})
 if (CRYPTOPP_FOUND)
 	TARGET_LINK_LIBRARIES(${LIBRARY} ${CRYPTOPP_LIBRARIES})
 endif()
+
+include(GNUInstallDirs)
+install(
+    FILES
+    util.h ethash.h endian.h compiler.h fnv.h data_sizes.h sha3.h sha3_cryptopp.h
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/libethash)
+
+install(TARGETS ${LIBRARY})
